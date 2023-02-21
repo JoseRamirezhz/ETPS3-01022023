@@ -6,34 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="367dp"
-        android:layout_height="690dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/edtTabla"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName" />
+        <LinearLayout
+            android:layout_width="368dp"
+            android:layout_height="616dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="22dp"
+            tools:layout_editor_absoluteY="95dp">
 
-        <Button
-            android:id="@+id/btnCalcular"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Generar" />
+            <EditText
+                android:id="@+id/edtTabla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/edtMtabla"
-            android:layout_width="match_parent"
-            android:layout_height="243dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="Tabla"
+                android:text="Generar" />
+
+            <EditText
+                android:id="@+id/edtMtabla"
+                android:layout_width="match_parent"
+                android:layout_height="243dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
