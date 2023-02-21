@@ -35,7 +35,10 @@
                 android:id="@+id/edtMtabla"
                 android:layout_width="match_parent"
                 android:layout_height="243dp"
+                android:editable="false"
                 android:ems="10"
+                android:enabled="false"
+                android:fadeScrollbars="true"
                 android:gravity="start|top"
                 android:inputType="textMultiLine" />
         </LinearLayout>
