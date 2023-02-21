@@ -33,6 +33,7 @@ EditText edtValor, edtResultado;
             Resultado = String.valueOf(resultados);
             //edtResultado.setText(Resultado);
             edtResultado.append(valtabla+"*"+i+"="+Resultado+"\n"); // appen va agregando
+
         }
     }
 }
