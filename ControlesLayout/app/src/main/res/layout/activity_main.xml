@@ -88,12 +88,15 @@
             <Spinner
                 android:id="@+id/spnPais"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:contextClickable="false"
+                tools:listheader="Seleccione un Pais" />
 
             <Button
                 android:id="@+id/btnGuardar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="Almacenar"
                 android:text="Guardar" />
 
             <EditText
