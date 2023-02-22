@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //importamos las clases de los componentes que tenemos en la vista
@@ -24,10 +25,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //hacemos los match con los de la vista
+        //EditText
         edNombre = findViewById(R.id.edtNombres);
         edApellidos = findViewById(R.id.edtApellidos);
         edinfo = findViewById(R.id.editTextTextMultiLine);
+        //Spinner
         spPais = findViewById(R.id.spnPais);
+        //RadioButtons
+        rbFem = findViewById(R.id.rbFemenino);
+        rbMas = findViewById(R.id.rbMasculino);
+        rbOtr = findViewById(R.id.rbOtros);
+
+
         /* forma 1 con areglos
             //Arreglo que permita llenar el spinner
             String[] opciones = {"Seleccione un Pais","Guatemala","El Salvador", "Honduras", "Nicaragua","Costa Rica","Panama"};
@@ -65,19 +74,46 @@ public class MainActivity extends AppCompatActivity {
     public void Almacenar(View v){
         String datos = "";
         String seleccion = spPais.getSelectedItem().toString();
+        String nombre = edNombre.getText().toString();
+        String apellido = edApellidos.getText().toString();
+        String genero = "";
+        String info;
+
+        if (rbMas.isChecked() == false && rbFem.isChecked() == false && rbOtr.isChecked() == false){
+            Toast mensaje = Toast.makeText(this, "Seleccione un genero",Toast.LENGTH_SHORT); //mensaje en burbuja flotante long duracion larga short mas rapido se quiita
+            mensaje.show();
+            //genero = "Seleccione un genero";
+        }else{
+            if (rbMas.isChecked() == true){
+                genero = "Masculino";
+            } else if (rbFem.isChecked() == true) {
+                genero = "Femenino";
+            } else{
+                genero = "Otros";
+            }
+        }
 
         if (seleccion.equals("Seleccione un Pais")){
             datos = "No ha seleccionado ningun pais";
-            edinfo.append(datos);
+            //edinfo.append(datos);
         }else if (seleccion.equals("Guatemala")){ //intemoff
             datos = "Guatemala";
-            edinfo.append(datos);
+            //edinfo.append(datos);
         }else if (seleccion.equals("El Salvador")){ //intemoff
             datos = "El Salvador";
-            edinfo.append(datos);
+            //edinfo.append(datos);
         }else if (seleccion.equals("Honduras")){ //intemoff
             datos = "Honduras";
-            edinfo.append(datos);
+            //edinfo.append(datos);
         }
+
+        info = "Los datos ingresados son los siguientes: \n "+
+                "Nombre: "+nombre+ "\n"+
+                "Apellido: "+apellido+"\n"+
+                "Genero: "+genero+"\n"+
+                "Pais: "+datos+"\n";
+        edinfo.append(info);
+
+        //scrollView para agregar scrool
     }
 }
