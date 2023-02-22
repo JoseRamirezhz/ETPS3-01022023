@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //importamos las clases de los componentes que tenemos en la vista
@@ -26,12 +28,38 @@ public class MainActivity extends AppCompatActivity {
         edApellidos = findViewById(R.id.edtApellidos);
         edinfo = findViewById(R.id.editTextTextMultiLine);
         spPais = findViewById(R.id.spnPais);
+        /* forma 1 con areglos
+            //Arreglo que permita llenar el spinner
+            String[] opciones = {"Seleccione un Pais","Guatemala","El Salvador", "Honduras", "Nicaragua","Costa Rica","Panama"};
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,opciones);
+            spPais.setAdapter(adaptador);
+         */
 
-        //Arreglo que permita llenar el spinner
-        String[] opciones = {"Seleccione un Pais","Guatemala","El Salvador", "Honduras", "Nicaragua","Costa Rica","Panama"};
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,opciones);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item){
+            public  View getView(int posicion, View contenido, ViewGroup parent){
+                View vista = super.getView(posicion,contenido,parent);
+                if (posicion == getCount()){
+                    ((TextView)vista.findViewById(android.R.id.text1)).setText("");
+                    ((TextView)vista.findViewById(android.R.id.text1)).setHint(getItem(getCount()));
+                }
+                return vista;
+            }
+            public  int getCount(){
+                return super.getCount()-1;
+            }
+        };
+
+        //lenando el dopdowns
+        adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adaptador.add("Guatemala");
+        adaptador.add("El Salvador");
+        adaptador.add("Honduras");
+        adaptador.add("Nicaragua");
+        adaptador.add("Costa Rica");
+        adaptador.add("Panama");
+        adaptador.add("Seleccione un Pais");//este es el elemento que va a restar el getCount() que quitara del spiner
         spPais.setAdapter(adaptador);
-
+        spPais.setSelection(adaptador.getCount()); //realizando un conteo
     }
 
     public void Almacenar(View v){
@@ -51,9 +79,5 @@ public class MainActivity extends AppCompatActivity {
             datos = "Honduras";
             edinfo.append(datos);
         }
-    }
-
-    public void  limpiar(View v){
-
     }
 }
