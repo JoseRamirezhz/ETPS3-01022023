@@ -31,10 +31,18 @@ public class Adaptador extends RecyclerView.Adapter<Elementos> {
     @Override
     public void onBindViewHolder(@NonNull Elementos holder, int position) {
         Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos
+        Elementos.tvGenPeli.setText(modelos.get(position).getGenPeli()); //empieza a crear los elementos
+        Elementos.imvimgPeli.setImageResource(modelos.get(position).getImgPeli()); //empieza a crear los elementos
+
+       /* Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos
+        Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos
+        Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos
+        Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos
+        Elementos.tvnomPeli.setText(modelos.get(position).getNomPeli()); //empieza a crear los elementos*/
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return modelos.size();
     }
 }

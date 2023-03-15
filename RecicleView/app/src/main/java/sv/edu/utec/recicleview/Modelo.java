@@ -6,7 +6,7 @@ public class Modelo {
     private String genPeli;
     private String direcPeli;
     private String aniopeli;
-    private String imgPeli;
+    private int imgPeli;
     private String durapeli;
     private String fechPeli;
     private double clasificar;
@@ -43,11 +43,11 @@ public class Modelo {
         this.aniopeli = aniopeli;
     }
 
-    public String getImgPeli() {
+    public int getImgPeli() {
         return imgPeli;
     }
 
-    public void setImgPeli(String imgPeli) {
+    public void setImgPeli(int imgPeli) {
         this.imgPeli = imgPeli;
     }
 

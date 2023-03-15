@@ -11,7 +11,7 @@ public class Elementos extends RecyclerView.ViewHolder {
     // heredamos con eextends RecyclerView.ViewHolder
     //estos elementos se extenderan de la clase older que tiene ek recilce view y creamos el constructor
 
-     ImageView imvimgPeli;
+    static ImageView imvimgPeli;
     static TextView tvnomPeli,tvGenPeli;
 
     //Constructor
