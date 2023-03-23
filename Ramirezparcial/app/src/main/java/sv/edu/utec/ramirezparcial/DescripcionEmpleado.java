@@ -35,6 +35,7 @@ public class DescripcionEmpleado extends AppCompatActivity {
         tvcargo.setText(info2);
         tvempresa.setText(info3);
         //imagen.setImageResource(imagenFoto);
+        //
 
 
     }
