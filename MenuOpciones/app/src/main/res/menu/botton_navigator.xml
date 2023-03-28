@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_principal"
+        android:title="Home"
+        />
+
+    <item android:id="@+id/nav_favoritos"
+        android:icon="@drawable/baseline_favorito"
+        android:title="Favorito"
+        />
+
+    <item android:id="@+id/nav_camara"
+        android:icon="@drawable/baseline_camara"
+        android:title="Camara"
+        />
+
+    <item android:id="@+id/nav_busqueda"
+        android:icon="@drawable/baseline_busqueda"
+        android:title="Busqueda"
+        />
+</menu>
