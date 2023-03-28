@@ -8,5 +8,6 @@
     <android.support.design.widget.BottomNavigationView
         android:layout_width="">
 
+
     </android.support.design.widget.BottomNavigationView>
 </RelativeLayout>
