@@ -5,9 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <android.support.design.widget.BottomNavigationView
-        android:layout_width="">
 
 
-    </android.support.design.widget.BottomNavigationView>
+    <FrameLayout
+        android:id="@+id/framCount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnNave">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btnNave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/botton_navigator"
+        android:background="?android:attr/windowBackground"
+        />
 </RelativeLayout>
