@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnInsertar"
+        android:layout_width="349dp"
+        android:layout_height="685dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="45dp">
+
+        <EditText
+            android:id="@+id/edtNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="108dp"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/edtTelefono"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtTelefono"
+            app:layout_constraintTop_toBottomOf="@+id/edtTelefono" />
+
+        <EditText
+            android:id="@+id/edtApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Apellidos"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/edtNombre"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtNombre"
+            app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Telefono"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/edtApellidos"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edtApellidos"
+            app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
+
+        <Button
+            android:id="@+id/btnActualiza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualiza"
+            app:layout_constraintEnd_toEndOf="@+id/btnBorrar"
+            app:layout_constraintHorizontal_bias="0.625"
+            app:layout_constraintStart_toStartOf="@+id/btnBorrar"
+            app:layout_constraintTop_toBottomOf="@+id/btnBorrar" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrar"
+            app:layout_constraintEnd_toEndOf="@+id/btnInsert"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnInsert"
+            app:layout_constraintTop_toBottomOf="@+id/btnInsert" />
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insert"
+            app:layout_constraintEnd_toEndOf="@+id/edtCorreo"
+            app:layout_constraintStart_toStartOf="@+id/edtCorreo"
+            app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

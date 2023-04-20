@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/principal"
+        android:title="Inicio"
+        />
+
+    <item android:id="@+id/nav_busqueda"
+        android:icon="@drawable/busqueda"
+        android:title="Buscar"
+        />
+
+    <item android:id="@+id/nav_contactos"
+        android:icon="@drawable/contactos"
+        android:title="Contactos"
+        />
+
+    <item android:id="@+id/nav_configuracion"
+        android:icon="@drawable/configuraciones"
+        android:title="Configurcion"
+        />
+</menu>
