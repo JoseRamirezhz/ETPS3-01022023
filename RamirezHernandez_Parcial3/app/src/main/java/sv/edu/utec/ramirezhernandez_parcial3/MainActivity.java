@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     seleccionFrag = new PrincipalFragment();
                     break;
                 case R.id.nav_busqueda:
-                    seleccionFrag = new Search();
+                    seleccionFrag = new Fragment();
                     break;
                 case R.id.nav_contactos:
                     seleccionFrag = new Contactos();
