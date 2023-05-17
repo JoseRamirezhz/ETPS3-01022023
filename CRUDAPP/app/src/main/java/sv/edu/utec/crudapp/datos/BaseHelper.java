@@ -1,5 +1,6 @@
 package sv.edu.utec.crudapp.datos;
 
+import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -15,7 +16,7 @@ public class BaseHelper extends SQLiteOpenHelper {
     private static final String NOMBRE_TABLA_CL = "t_clientes";
     private static final String NOMBRE_TABLA_PRO = "t_productos";
 
-    public BaseHelper(@Nullable MainActivity context) {
+    public BaseHelper(@Nullable Context context) {
         super(context, NOMBRE_BD, null, VERSION_BD);
     }
 
@@ -30,7 +31,7 @@ public class BaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sql_db, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase sql_db, int oldVersion, int newVersion) {
         sql_db.execSQL("DROP TABLE "+NOMBRE_TABLA_PR);
         onCreate(sql_db);
     }

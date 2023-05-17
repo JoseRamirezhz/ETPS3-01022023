@@ -5,13 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".ExplorarFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text="Fragmentos de Explorar"
-        android:textStyle="bold"
-        android:textSize="22sp"
-        android:textColor="@color/purple_200"
-        android:gravity="center"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lvProveedores"/>
+
+
+    </LinearLayout>
 </FrameLayout>
