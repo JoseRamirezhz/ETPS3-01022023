@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/agregar"
+            android:icon="@drawable/cliente_icon"
+            android:title="Nuevo Cliente"/>
+        <item android:id="@+id/Vcliente"
+            android:icon="@drawable/vehiculo_icon"
+            android:title="Nuevo Cliente Vehiculo"/>
+        <item android:id="@+id/vehiculo"
+            android:icon="@drawable/marca_icon"
+            android:title="Nuevo Vehiculo"/>
+    </group>
+</menu>
